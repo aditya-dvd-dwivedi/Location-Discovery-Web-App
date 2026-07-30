@@ -8,17 +8,29 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+<<<<<<< Updated upstream
     "start": "node app.js"
+=======
+    "start": "nodemon app.js"
+>>>>>>> Stashed changes
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "body-parser": "^2.3.0",
+<<<<<<< Updated upstream
+=======
+    "cloudinary": "^2.10.0",
+>>>>>>> Stashed changes
     "express": "^5.2.1",
     "express-validator": "^7.3.2",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.7.4",
     "mongoose-unique-validator": "^6.1.1",
     "multer": "^2.2.0",
+<<<<<<< Updated upstream
+=======
+    "multer-storage-cloudinary": "^4.0.0",
+>>>>>>> Stashed changes
     "uuid": "^14.0.1"
   },
   "devDependencies": {
