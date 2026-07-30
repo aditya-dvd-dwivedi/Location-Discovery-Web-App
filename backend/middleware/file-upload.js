@@ -1,10 +1,7 @@
 const multer=require('multer');
 const uuid=require('uuid');
-<<<<<<< Updated upstream
-=======
-const {v2:cloudinary}=require('cloudinary');
+const cloudinary=require('cloudinary').v2;
 const { CloudinaryStorage } = require('multer-storage-cloudinary');
->>>>>>> Stashed changes
 
 //just sets our extension
 const MIME_TYPE_MAP={
@@ -13,21 +10,6 @@ const MIME_TYPE_MAP={
     'image/jpg':'jpg'
 };
 
-<<<<<<< Updated upstream
-const fileUpload=multer({
-    limits: 500000,
-    storage: multer.diskStorage({
-        //where to save images
-        destination: (req,file,cb)=>{
-            cb(null,'uploads/images')
-
-        },//set filename of what we save
-        filename: (req,file,cb)=>{
-            const ext=MIME_TYPE_MAP[file.mimetype];
-            cb(null,uuid.v1()+'.'+ext);
-        }
-    }),//if not a valid ext send it back
-=======
 
 // Configuration
 cloudinary.config({ 
@@ -48,7 +30,6 @@ const storage = new CloudinaryStorage({
 const fileUpload=multer({
     limits: 500000,
     storage: storage,//if not a valid ext send it back
->>>>>>> Stashed changes
     fileFilter: (req,file,cb)=>{
         const isValid=!!MIME_TYPE_MAP[file.mimetype];
         const error=isValid?null:new Error('Invalid mime type');
